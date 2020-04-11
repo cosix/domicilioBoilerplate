@@ -1,6 +1,6 @@
 {
-  "name": "Ferrara a Domicilio",
-  "short_name": "FerraraDomicilio",
+  "name": "Casal di Principe Domicilio",
+  "short_name": "CasalDiPrincipeDomicilio",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait",
