@@ -1,6 +1,6 @@
 {
-  "name": "Casal di Principe Domicilio",
-  "short_name": "CasalDiPrincipeDomicilio",
+  "name": "Casal di Principe a Domicilio",
+  "short_name": "CasalDiPrincipeADomicilio",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait",
