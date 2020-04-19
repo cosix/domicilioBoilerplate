@@ -22,7 +22,7 @@ export default class App extends Component {
 		isPopupOpen: false,
 		popupNumbers: [],
 	}
-	
+
 	handleRoute = e => {
 		this.currentUrl = e.url;
 		this.setState({ isHomepage: e.url.replace(/\?.*/g, "") === "/" });
@@ -37,7 +37,7 @@ export default class App extends Component {
 		})
 	}
 
-	closePopup = (e) => {	
+	closePopup = (e) => {
 		if (e.currentTarget === e.target) {
 			this.setState({ isPopupOpen: false })
 		}
@@ -56,7 +56,7 @@ export default class App extends Component {
 
 	componentDidUpdate() {
 		const { isPopupOpen } = this.state;
-		
+
 		const root = document.documentElement;
 		root.style.setProperty('--popup-visible', isPopupOpen ? 'hidden': 'initial')
 	}
@@ -65,19 +65,16 @@ export default class App extends Component {
 		return (
 			<Action.Provider value={{setPopupNumbers: this.setPopupNumbers}}>
 				<div id="app" class="px-5 max-w-screen-md mx-auto">
-					<nav class="flex justify-center md:justify-end items-center">
+					<nav class="flex justify-center md:justify-center items-center">
 						{
 							isHomepage
 								? <Link class="m-5 bg-blue-500 inline-block hover:bg-blue-700 text-white font-bold px-2 py-1 rounded" href="/form">➕ Aggiungi un'attività</Link>
 								: <Link class="m-5 text-blue-500 hover:text-blue-800" href="/">Ritorna alla ricerca</Link>
 						}
 					</nav>
-					<h1 class="font-sans text-4xl md:text-5xl lg:text-6xl pt-10 text-gray-800 text-center capitalize">
-						<span class="block sm:inline-block" role="img" aria-label="biker">
-							🚴
-						</span>
-						{`${process.env.PREACT_APP_CITY} a Domicilio`}
-					</h1>
+                  <div class="text-center w-full">
+                     <img class="block sm:inline-block" src="./assets/logo-large.jpg"/>
+                  </div>
 					<Router onChange={this.handleRoute}>
 						<Home path="/" results={results} />
 						<Form path="/form" />
