@@ -46,6 +46,10 @@ export default class Home extends Component {
 		return (
 			<Fragment>
 				<div class="relative p-5 lg:max-w-5xl xl:max-w-6xl lg:m-auto pb-10">
+               <div class="site-description" style="color: green">
+                  Consulta le attività commerciali che effettuano consegna a domicilio a
+               </div>
+               <div class="site-description" style="color:red; margin-bottom:5%">Casal di Principe</div>
 					<input
 						class="bg-white focus:outline-none focus:shadow-outline border border-gray-500 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
 						type="text"
